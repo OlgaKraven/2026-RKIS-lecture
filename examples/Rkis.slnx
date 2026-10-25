@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Rkis.Adapters/Rkis.Adapters.csproj" />
+  <Project Path="Rkis.Checks/Rkis.Checks.csproj" />
+  <Project Path="Rkis.Core/Rkis.Core.csproj" />
+  <Project Path="Rkis.LocalService/Rkis.LocalService.csproj" />
+  <Project Path="Rkis.WinForms/Rkis.WinForms.csproj" />
+  <Project Path="Rkis.Wpf/Rkis.Wpf.csproj" />
+</Solution>

@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "project": "lecture-generator",
+  "captured_on": "2026-10-23",
+  "timezone": "Europe/Moscow",
+  "path_base": "repository-root",
+  "dependencies": [
+    {
+      "id": "lecture-rhino",
+      "kind": "skill",
+      "source": {
+        "repository": "https://github.com/OlgaKraven/BrainM.git",
+        "commit": "6e7d60a717b13d4c317f5362d6505164cc7e4b61",
+        "thread_url": "thread://01a1600a-27de-7551-a120-fb1b7b60af25?hostId=local"
+      },
+      "entrypoint": "BrainM/Навыки/lecture-rhino/SKILL.md",
+      "runtime_requirement": "An image generation tool must be available in the target environment.",
+      "files": [
+        {
+          "path": "BrainM/Навыки/lecture-rhino/SKILL.md",
+          "bytes": 15015,
+          "sha256": "d8bf767b2eb18c3b3f38477615cf059a7e366db1fdf609ba91a818652fceb603"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/agents/openai.yaml",
+          "bytes": 519,
+          "sha256": "0e9b725c5914038bf036a58cef47e36e8a8cc892d12c341e8ebb19cc8e59590c"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/assets/rhino-cpp-approved.png",
+          "bytes": 1994692,
+          "sha256": "94bede124cb3645927726a42eed43a09f6fd8f436b3ad9f3d4b5c7e60e3db453"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/assets/rhino-reference.png",
+          "bytes": 1557996,
+          "sha256": "08e7e4a10c5332a047761bc6a6d852248e0fcae2424997432e8b0e1a4b99d8c0"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/assets/synergy-logo.png",
+          "bytes": 10099,
+          "sha256": "f34cfbd179d8a192cbd609dc424ea8babbcad53a3afe9b4e2ac987d6c4881dc7"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/references/cpp-prompt.md",
+          "bytes": 4503,
+          "sha256": "e21be0724c4f69f986f1951b8b374d996f8bd9d994d010c3b85770b53709f0f4"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-rhino/references/sources.md",
+          "bytes": 5447,
+          "sha256": "0b2e196c54875e700f5ee5911ee70e4b378d4faadb2b8f5163f5667ac1b76a77"
+        }
+      ]
+    },
+    {
+      "id": "lecture-catalog-design",
+      "kind": "design-reference",
+      "source": {
+        "thread_url": "thread://01a16017-f0d8-78f0-b734-e3c22915d157?hostId=local",
+        "snapshot": "lecture-catalog-design.html",
+        "snapshot_sha256": "99f1b0fd1ea4b2614f1d990a47eadcdcc3cf536ea56a205c2671d580b215d563",
+        "includes_latest_change": "Red open buttons in list view."
+      },
+      "entrypoint": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/preview.html",
+      "bundled_libraries": [
+        {
+          "name": "lucide",
+          "version": "1.17.0",
+          "license": "ISC (includes Feather MIT notice)",
+          "runtime_url": "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js",
+          "package_url": "https://unpkg.com/lucide@1.17.0/package.json",
+          "license_url": "https://unpkg.com/lucide@1.17.0/LICENSE"
+        },
+        {
+          "name": "Raleway",
+          "format": "embedded WOFF2 in original snapshot",
+          "license": "OFL-1.1",
+          "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/raleway/OFL.txt"
+        },
+        {
+          "name": "qrcode",
+          "version": "1.5.4",
+          "license": "MIT",
+          "location": "embedded in original snapshot"
+        },
+        {
+          "name": "dijkstrajs",
+          "version": "1.0.3",
+          "license": "MIT",
+          "location": "embedded in original snapshot"
+        }
+      ],
+      "limitations": [
+        "The lecture and PDF actions are demonstrations.",
+        "State is not persisted across reloads in standalone preview.",
+        "The material-folder URL is demonstration data."
+      ],
+      "files": [
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/catalog-list-red-buttons.jpg",
+          "bytes": 60427,
+          "sha256": "1f4a249fd2fa579bda6a39ae52d22b632ac33fe8137594d021d96399888181a2"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/catalog-view-dark-final.jpg",
+          "bytes": 57114,
+          "sha256": "586b49aa1392a26e540eacf6c9e2157a168001f024dba9733c1656ec70188895"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/catalog-view-final.jpg",
+          "bytes": 62809,
+          "sha256": "69a6369242a3fa6d59117416e71fba21a9a342ca8936f6a8e6ef7145d9d1e95c"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/catalog-view-mobile-final.jpg",
+          "bytes": 34715,
+          "sha256": "8321e5c142af59c6a8544b315ad587c363f065836cda5b5e85f52b05eea8746d"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/lecture-catalog-design.html",
+          "bytes": 951725,
+          "sha256": "99f1b0fd1ea4b2614f1d990a47eadcdcc3cf536ea56a205c2671d580b215d563"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/materials-qr-runtime.license.txt",
+          "bytes": 1887,
+          "sha256": "e48c7eea43ac92436a24729f5c0e937affe14fbcc59e1fa1b987ad28c7baa90c"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/preview.html",
+          "bytes": 952103,
+          "sha256": "c9dd32b679599f0c2db8e608fbc4b2074996616be2461accc461af21abee7c4a"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/vendor/lucide-1.17.0.js",
+          "bytes": 601680,
+          "sha256": "fde878a4f7aebe548b071eaaf343d898f66d275e93970abe95d8ca5fda290b51"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/vendor/lucide-LICENSE",
+          "bytes": 3208,
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/vendor/lucide-package.json",
+          "bytes": 1795,
+          "sha256": "d90415b275738e2536dc9ed72cbcfa3c6f860958e767cbe95d125dbff5e26c0c"
+        },
+        {
+          "path": "BrainM/Проекты/Генератор лекций/references/lecture-catalog/vendor/raleway-OFL.txt",
+          "bytes": 4404,
+          "sha256": "b177e8d2c9bb144b95d6618330fdb574dd86df1984f2930026ec2e64593f3357"
+        }
+      ]
+    },
+    {
+      "id": "lecture-infographics",
+      "kind": "skill",
+      "version": "1.1.0",
+      "entrypoint": "BrainM/Навыки/lecture-infographics/SKILL.md",
+      "runtime_requirement": "Authoring tools and browser verification are required; no runtime model calls are added to the student site.",
+      "files": [
+        {
+          "path": "BrainM/Навыки/lecture-infographics/SKILL.md",
+          "bytes": 17236,
+          "sha256": "143e75e22e66850c4b5f0b6827c0e892e4443b69e812721be794c4cbf8f403ea"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/agents/openai.yaml",
+          "bytes": 604,
+          "sha256": "2854beed27657c2957611e615a28af620904f0594e9081b8650e8e236eabf4d4"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/algorithms.md",
+          "bytes": 12371,
+          "sha256": "f6b1ed76f920f4086613d2b4a92a4c0c59fa3b279587109fafef6bc7b26e7e21"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/architecture.md",
+          "bytes": 6946,
+          "sha256": "bf2af81617010da1ff4728f395fb362d99ae72e82357b120b5085eee88cebbc8"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/icons.md",
+          "bytes": 10279,
+          "sha256": "5f1a68e5047e3852273d0b81ed2ec41dbe45074ca47bdc851ab65fe4cd2de1f3"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/information.md",
+          "bytes": 21793,
+          "sha256": "68ce6e14b209ec9bd119f72f120a5fa0269a1d220d7b87d9185c4371c1515c75"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/interfaces.md",
+          "bytes": 7406,
+          "sha256": "a3b6eaed048ac8bc7006ca2a2a0218688363ea98c96f6d609328088ad23b93f2"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/operations.md",
+          "bytes": 7280,
+          "sha256": "6ef041b4909ffb5f5e3cea8e5f07c6b15cc952b4b33f874030d2b2fe71c885b3"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/processes.md",
+          "bytes": 15940,
+          "sha256": "73b1a82316418455d0e39b31e1aa8826bede883be22e8599fae0eec3b4f5498c"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/requirements.md",
+          "bytes": 5071,
+          "sha256": "85feb0c10e64646d8566a9298a327c4dde4a12f8e196173374d707bb7e15cf99"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/sql.md",
+          "bytes": 4689,
+          "sha256": "1bf71e379cb567ddfe0fc0857a874af20049fcef175a3153a9de2ebf22ac6ebc"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/tables.md",
+          "bytes": 8610,
+          "sha256": "ea4216e88e02ed92eaa569a5a7c167b588d1c3c60aa8683e5d11040213383f03"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog/uml.md",
+          "bytes": 25902,
+          "sha256": "6e5f0d368f62d234065392d8a22cb37936e8abf64c99573584caa5824fa1a6cf"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/catalog-index.md",
+          "bytes": 2065,
+          "sha256": "e553e88ebcc1fac4befdc0f3cb1bbf3936b6833d63ddf5c90166f3fb3f4a0844"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/design.md",
+          "bytes": 9877,
+          "sha256": "c57c27db01480b8529c725ab771a09354c795e0c36c8649007184541868c2754"
+        },
+        {
+          "path": "BrainM/Навыки/lecture-infographics/references/interaction.md",
+          "bytes": 25780,
+          "sha256": "adfb695aae303f6c4da570abd88dc8321411e78a51b5eafb6b38d7541b8e2601"
+        }
+      ],
+      "source": {
+        "repository": "https://github.com/OlgaKraven/BrainM.git",
+        "commit": "14ebbc9840c25b044a6a8046e31c1261100d1085"
+      }
+    },
+    {
+      "id": "presentation-design",
+      "kind": "skill",
+      "version": "1.1.0",
+      "source": {
+        "thread_url": "thread://01a16341-27bf-7a21-bc24-9a51243cb34b?hostId=local",
+        "approved_on": "2026-10-22",
+        "snapshot": "assets/prototype-fragment.html",
+        "snapshot_sha256": "3fbc61c6560041819e3fd75fb73628336560ba7a8bb4dae5aacd2f02c752b671",
+        "commit": "2a3ef2decb866cb9f34df01729a4db396f3b1fd8"
+      },
+      "entrypoint": "BrainM/Навыки/presentation-design/SKILL.md",
+      "runtime_requirement": "Local browser for standalone preview. Real separate-window synchronization, fullscreen permissions and exports require target-application validation.",
+      "files": [
+        {
+          "path": "BrainM/Навыки/presentation-design/SKILL.md",
+          "bytes": 8094,
+          "sha256": "4fad7a108f9d1c65c80a9c6ba141a05c90c5d762de231ab9043c55491db04e72"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/agents/openai.yaml",
+          "bytes": 423,
+          "sha256": "c04b1fcd42a9ab902d509425dd4e20a0cfe979e2ea2eaf47ed0d4e3cc20fffe9"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/answer-dark.png",
+          "bytes": 62332,
+          "sha256": "664a102faf492aa68bfb57aeb36c12ae242c69502465980be8aa30ecb55f22d2"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/answer-light.png",
+          "bytes": 61248,
+          "sha256": "d7bb19b3943bef107530b24d6c57f4afec8b95f28a1732a34f338881067e81ff"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/assessment-dark.png",
+          "bytes": 117110,
+          "sha256": "ecbff424185fa1a4606edcb559f93ea898aa0d5cd91654f27d1aee6a377e01dd"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/assessment-light.png",
+          "bytes": 115842,
+          "sha256": "7b54554bee0cae56696b1e9e792dbbab0383411744cb8ff12cc6c7c26fcff69e"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/audience-dark.png",
+          "bytes": 159007,
+          "sha256": "1c490ab63aed0c41aafaa7098fd0a2f081578751d7a156875f8003dc4b68e10a"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/audience-light.png",
+          "bytes": 155827,
+          "sha256": "b5ff567f89d44584b8176348ae00a80f5c22329a223b718d51a26239f57d52af"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/contents-dark.png",
+          "bytes": 146998,
+          "sha256": "98652659c4fefa71d428b6a860f3016766b8acff4056dfb49e6f292f2a5ff542"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/contents-light.png",
+          "bytes": 138662,
+          "sha256": "a5dee8eadccb5c8a5871cbd08b4111ba942e04a83e1dc68ab7d616c1c0d0e076"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/definitions-dark.png",
+          "bytes": 157027,
+          "sha256": "49f7ea0a4591b1add5fcf5405748ea5701be9c03d27b3dd1ec5ab96257dcd81a"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/definitions-light.png",
+          "bytes": 153433,
+          "sha256": "d62ba1f1b6656a741dd64dcae697ad9440872196d90b95d2aab321746490a6d1"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/definitions-mobile.png",
+          "bytes": 111012,
+          "sha256": "0888878eedafc22f63682a2bdec85368f735956d3d760b99e5fd1f2205677239"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/diagram-dark.png",
+          "bytes": 84547,
+          "sha256": "21be79ed41327b638705dd4176d7b1f9fc82b0bd9f9039f0515dcded0cddb9a4"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/diagram-light.png",
+          "bytes": 83300,
+          "sha256": "6dbdb0fa2016dc211c03151c149a06a227d3f405261acce3e991cde501e4bf27"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/manifest.json",
+          "bytes": 10046,
+          "sha256": "b91f5e7a31b943b8b3844d1a78aab3b4d1618546ef07298269a070015e0182e9"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/menu-dark.png",
+          "bytes": 347737,
+          "sha256": "ede28a52b2f3f3e5ea368195e83f7c7972595ba2c3726078cce031941b63846c"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/menu-light.png",
+          "bytes": 351333,
+          "sha256": "ca4ee719539bd5b7c5985eaf8bfd8e567142634b54228628bf88980161ea3708"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/passport-dark.png",
+          "bytes": 78620,
+          "sha256": "ef7059318cfd9b24b6e86518068d15d9d2d6695b22bd78fb9d848b06c333b777"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/passport-light.png",
+          "bytes": 77474,
+          "sha256": "c2de09ddbbbf0b1fa987fec1ae7cfd2a63d3b8158493f7c74741b27817888311"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/presentation-design.css",
+          "bytes": 26464,
+          "sha256": "b8b17597f136699b1b360615b12567de1c390a4f588902c63e01353aa3c7fe48"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/question-dark.png",
+          "bytes": 73831,
+          "sha256": "8189eed92b860ec03e88d8af11bca4386fe3bcf0d38766ad5b206f1a3a8d5df4"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/question-light.png",
+          "bytes": 71002,
+          "sha256": "14d80deeca2fbdcdb2e6a2b0d501ea33320b2bc4fe678af64c0457f3098a5308"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/teacher-dark.png",
+          "bytes": 163023,
+          "sha256": "3994f0d9ad34722d7421871f491aa4a0cd4b68175289501bb85b44ba21c4522c"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/teacher-light.png",
+          "bytes": 155473,
+          "sha256": "eb88727d982f49a4ded88b239cf40e0571ded6d079e79d90f4a9e162593237af"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/title-dark.png",
+          "bytes": 381701,
+          "sha256": "c268b3da2664b04f5924fba18569025bd58fd3da832a5f7b242cd4b8424021f9"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-2026-10-22/title-light.png",
+          "bytes": 385893,
+          "sha256": "8e45643d46c468dfeaf60314ca8aa81d94f1fa08334feff068d971ab96521746"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/approved-preview.html",
+          "bytes": 8214,
+          "sha256": "18af07ff617693d5176347b77fed906c4cc6eb2e5a93352fd2dd88b9c07998b5"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/preview.html",
+          "bytes": 923344,
+          "sha256": "7c4a6fbec361965b95bc64c78c1e15b8d61586ea9e165399d785ac947feb1d1f"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/prototype-fragment.html",
+          "bytes": 922664,
+          "sha256": "3fbc61c6560041819e3fd75fb73628336560ba7a8bb4dae5aacd2f02c752b671"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/rhino-okfks.png",
+          "bytes": 627964,
+          "sha256": "5dc4b24cc46aa1d9694b6f20fcec9c025d8bb6c256e84df6229a12657aa603f2"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/synergy-mark.png",
+          "bytes": 10099,
+          "sha256": "f34cfbd179d8a192cbd609dc424ea8babbcad53a3afe9b4e2ac987d6c4881dc7"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/synergy-wordmark.jpg",
+          "bytes": 13063,
+          "sha256": "a3ab46cfef56f312010355c803dc607fa330db408619e0f642901d0a99b831a4"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/vendor/lucide-1.17.0.js",
+          "bytes": 601680,
+          "sha256": "fde878a4f7aebe548b071eaaf343d898f66d275e93970abe95d8ca5fda290b51"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/vendor/lucide-LICENSE",
+          "bytes": 3208,
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/vendor/lucide-package.json",
+          "bytes": 1795,
+          "sha256": "d90415b275738e2536dc9ed72cbcfa3c6f860958e767cbe95d125dbff5e26c0c"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/vendor/raleway-OFL.txt",
+          "bytes": 4404,
+          "sha256": "b177e8d2c9bb144b95d6618330fdb574dd86df1984f2930026ec2e64593f3357"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/vendor/raleway.woff2",
+          "bytes": 25864,
+          "sha256": "ac99ad1c437b60ef445a7c13c958d4d574ef98050de2ccf182ba6ccdb3bfbdfd"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/references/design.md",
+          "bytes": 23444,
+          "sha256": "dcb835b5692c8741d194656379392e228d3659f923a26bb76cd0c4d31e6493d7"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/references/source.md",
+          "bytes": 7776,
+          "sha256": "9997e5c3a7c567dfbb7d297b3687333e352528d2629f3e31909b68892afca025"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/typography/raleway-OFL.txt",
+          "bytes": 4403,
+          "sha256": "c62d0f4b78825cbf2d99ac7ea3dd163f645210efa032243731184c9f86a6eab6"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/typography/raleway-cyrillic.woff2",
+          "bytes": 25864,
+          "sha256": "ac99ad1c437b60ef445a7c13c958d4d574ef98050de2ccf182ba6ccdb3bfbdfd"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/assets/typography/typography.css",
+          "bytes": 736,
+          "sha256": "3df7546f3abf4ab5da5c07c5e181400518188ebbe06f23f30fd199a9981714b2"
+        },
+        {
+          "path": "BrainM/Навыки/presentation-design/references/typography.md",
+          "bytes": 3998,
+          "sha256": "fc0abe32bc67fbfbc13460c6a01127bf9f3704b0558a1d8c234885eecdbffdf8"
+        }
+      ],
+      "approved_implementation": {
+        "repository": "https://github.com/OlgaKraven/2026-OKFKS-lecture",
+        "commit": "a83aff10581dff0068241c488174d22179a6d4b2",
+        "gallery": "BrainM/Навыки/presentation-design/assets/approved-preview.html"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<Window x:Class="Rkis.Wpf.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Товары · WPF" Width="820" Height="500">
+  <DockPanel Margin="16">
+    <Button DockPanel.Dock="Bottom" Height="48" Margin="0,12,0,0" Click="Rename">Изменить название первого товара</Button>
+    <DataGrid ItemsSource="{Binding Products}" AutoGenerateColumns="False" CanUserAddRows="False">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Id" Binding="{Binding Id}" IsReadOnly="True"/>
+        <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Name, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}"/>
+        <DataGridTextColumn Header="Цена" Width="140" Binding="{Binding Price, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </DockPanel>
+</Window>
