@@ -27,7 +27,7 @@ import './layout-final.css'
 import './features.css'
 import './infographics.css'
 import './presentation-pirip.css'
-import {CourseCatalog} from './CourseCatalog'
+import {CourseCatalog} from '../CourseCatalog'
 import { CourseTools, StudyButtons, slideText } from './CourseTools'
 const CourseEditor = lazy(() => import('./CourseEditor'))
 const Teaching = lazy(() => import('./Teaching'))
@@ -257,7 +257,7 @@ export function LectureSite({ course, base = '/' }: { course: Course; base?: str
   return (
     <AssessmentProvider course={course} base={base}>
       {!lecture ? (
-        <CourseCatalog course={course} base={base} profile={profile} materials={materials} themeButton={themeButton} onOpen={open} onPrint={print} onSettings={()=>setModal('settings')} invalidLecture={query.has('lecture')}/>
+        <CourseCatalog course={course} base={base} profile={profile} materials={materials} theme={theme} storagePrefix={prefix} onOpenLecture={open} onPrint={print} onProfileChange={p=>{setProfile(p);save(`${prefix}:profile`,p)}} onMaterialsChange={url=>{setMaterials(url);save(`${prefix}:materials`,url)}} onThemeChange={setTheme} invalidLecture={query.has('lecture')}/>
       ) : (
         <main className={`deck-shell ${animations ? 'motion-on' : ''}`}>
           <header className="deck-toolbar">
