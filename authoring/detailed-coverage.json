@@ -1,0 +1,225 @@
+{
+  "reference": "2026-OKFKS-lecture@e36d019",
+  "detailedLectures": [
+    "s05-01-dotnet",
+    "s05-02-csharp",
+    "s05-03-types",
+    "s05-04-diagnostics",
+    "s05-05-model",
+    "s05-06-invariants",
+    "s05-07-collections",
+    "s06-01-passwords",
+    "s06-02-login",
+    "s06-03-roles",
+    "s06-04-lockout",
+    "s06-05-images",
+    "s06-06-administration",
+    "s06-07-interface",
+    "s05-14-connections",
+    "s05-15-commands",
+    "s05-16-repository",
+    "s05-17-binding",
+    "s05-18-editing",
+    "s05-19-navigation",
+    "s05-08-interfaces",
+    "s05-09-business",
+    "s05-10-money",
+    "s05-11-states",
+    "s05-12-rules",
+    "s05-13-batch",
+    "s07-01-files",
+    "s07-02-json",
+    "s07-03-http",
+    "s07-04-validation",
+    "s07-05-docx"
+  ],
+  "missingLectures": [],
+  "lectures": [
+    {
+      "id": "s05-01-dotnet",
+      "slides": 71,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-02-csharp",
+      "slides": 72,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-03-types",
+      "slides": 71,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-04-diagnostics",
+      "slides": 72,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-05-model",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-06-invariants",
+      "slides": 71,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-07-collections",
+      "slides": 71,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-08-interfaces",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-09-business",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-10-money",
+      "slides": 73,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-11-states",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-12-rules",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-13-batch",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-14-connections",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-15-commands",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-16-repository",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-17-binding",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-18-editing",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s05-19-navigation",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-01-passwords",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-02-login",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-03-roles",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-04-lockout",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-05-images",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-06-administration",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s06-07-interface",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s07-01-files",
+      "slides": 69,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s07-02-json",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s07-03-http",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s07-04-validation",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    },
+    {
+      "id": "s07-05-docx",
+      "slides": 70,
+      "questions": 4,
+      "tasks": 16
+    }
+  ]
+}

@@ -50,8 +50,11 @@
   },
   "note": "Source files came from the available local engine checkout, including local adaptations. Source HEAD alone is not their exact identity; file hashes are authoritative. No source checkout was modified.",
   "adaptedFilesSha256": {
-    "src/engine/model.ts": "370e0abfcc38c1b2e938120c3a530b6beaa04319811c938fafa1d07759791b73",
-    "src/engine/SlideView.tsx": "a86d466028f150a460520ec1d14805c1a54a29030e698a20aab30dd02765237e",
-    "src/engine/CourseCatalog.tsx": "fd04f0e3bdf4ff903265631330300d1ff44bdd5f286ac8de4e73a97892f5a428"
+    "src/engine/model.ts": "4423162cdb81f7326079917fb2eeffbb9639cf10ae59195e3fcbfdfafea6f01a",
+    "src/engine/SlideView.tsx": "6191fceef99d1df2d43df344b6221dc0d0204f1ef5df26f3ce34a093d7cba563",
+    "src/engine/CourseCatalog.tsx": "fd04f0e3bdf4ff903265631330300d1ff44bdd5f286ac8de4e73a97892f5a428",
+    "src/engine/Teaching.tsx": "4de70a9f52b478ef4b5cca77630076fa9fcf6ea1497fbd58a4c42fe87bdae74c",
+    "src/engine/Assessment.tsx": "7e111fc5d4d97305cc4fae6cc4120d24b1b6a7d3f7ddc9cf88b9c0ff573ef5f5",
+    "src/engine/LectureSite.tsx": "032c619f8bf3cc7002e494423e2a10f07f3c555a795bc41a46c83f174636e3a8"
   }
 }

@@ -36,7 +36,20 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .rkis-circles{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 96% 56%,transparent 0 28%,rgb(237 19 28 / .12) 28.1% 28.3%,transparent 28.4%),radial-gradient(circle at 97% 57%,transparent 0 34%,rgb(237 19 28 / .09) 34.1% 34.3%,transparent 34.4%)}
 .slide-frame.kind-title .slide-brand{color:var(--text,#1c1c1c)!important}
 .deck-topic{display:none!important}
-.slide-frame .slide-kicker{display:none}
+.slide-frame .slide-kicker{display:block}
+.slide-frame .choice-grid label{background:var(--surface);color:var(--text);border-color:var(--border)}
+.slide-frame .choice-grid label:has(input:checked){background:color-mix(in srgb,var(--red) 10%,var(--surface));border-color:var(--red)}
+.slide-frame .choice-grid input{accent-color:var(--red)}
+.slide-frame .task-actions .button.ghost{color:var(--text);border-color:var(--border)}
+@media(min-width:821px){
+ .slide-frame.kind-test .slide-copy>h2{font-size:2.7cqw;margin-bottom:1.2cqw}
+ .slide-frame .interactive-task{margin-top:0}
+ .slide-frame .task-prompt{font-size:1.7cqw;line-height:1.4;margin-bottom:1cqw}
+ .slide-frame .choice-grid label{font-size:1.5cqw;line-height:1.4;padding:.8cqw;gap:.6cqw;align-items:flex-start}
+ .slide-frame .choice-grid:has(input[type=checkbox]){grid-template-columns:repeat(3,minmax(0,1fr))}
+ .slide-frame .matching-fields label{font-size:1.5cqw;grid-template-columns:1fr 1.8fr}
+ .slide-frame .matching-fields select{font-size:1.4cqw}
+}
 .button,.icon-button{font-weight:600}
 .icon-button,.button.secondary{background:var(--surface)!important;color:var(--text)!important;border-color:var(--border)!important}
 .note-font{display:none!important}

@@ -4,7 +4,7 @@ import type { Course, Lecture, Task } from './model'
 import { assetUrl } from './model'
 import { validateBank } from './validation'
 import { read, save } from './storage'
-import { evaluate } from './scoring'
+import { evaluate,shuffle } from './scoring'
 import type { Answer, Key, Result } from './scoring'
 import { Modal } from './Modal'
 import { useMobile } from './responsive'
@@ -115,13 +115,16 @@ export function AssessmentProvider({
         },
         change: (t, a) => {
           setError('')
-          put(t.id, { ...(attempts[t.id] || fresh(t)), draft: a })
+          put(t.id, { ...(attempts[t.id] || {...fresh(t),seed:0}), draft: a })
         },
         submit,
         retry: (t) => {
           setError('')
           const a = attempts[t.id] || fresh(t)
-          put(t.id, { ...fresh(t), attempts: a.attempts })
+          const next=fresh(t)
+          const order=(seed:number)=>shuffle(t.options||[],seed).map(o=>o.id).join('|')
+          for(let n=0;n<20&&t.options&&order(next.seed)===order(a.seed);n++)next.seed=(next.seed+1)>>>0
+          put(t.id, { ...next, attempts: a.attempts })
         },
         busy,
         error,
@@ -141,7 +144,8 @@ export function TaskView({ task: t }: { task: Task }) {
   const mobile = useMobile()
   const ctx = useContext(AssessmentContext)!
   const a = ctx.attempts[t.id]
-  const options = t.options || []
+  const options = shuffle(t.options || [],a?.seed||0)
+  const items = shuffle(t.items||[],(a?.seed||0)^0x9e3779b9)
   const done = Boolean(a?.result)
   const show = Boolean(a?.reveal)
   const disabled = done || ctx.readonly
@@ -192,7 +196,7 @@ export function TaskView({ task: t }: { task: Task }) {
       )}
       {t.type === 'matching' && (
         <div className="matching-fields">
-          {t.items?.map((item) => (
+          {items.map((item) => (
             <label key={item.id}>
               <span>{item.text}</span>
               <select
