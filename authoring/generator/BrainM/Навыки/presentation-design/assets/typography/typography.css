@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Raleway;
+  src: url('./raleway-cyrillic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --font-text: Raleway, Arial, sans-serif;
+  --font-code: Consolas, "Courier New", monospace;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+body, input, select, textarea {
+  font-family: var(--font-text);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-text);
+  font-weight: 700;
+}
+
+button, .button, .icon-button, summary, nav a, [role="tab"] {
+  font-family: var(--font-text);
+  font-weight: 600;
+}
+
+pre, code, kbd, samp, .code-block {
+  font-family: var(--font-code);
+  font-variant-ligatures: none;
+}

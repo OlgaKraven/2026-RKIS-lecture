@@ -1,0 +1,5 @@
+authoring/generator/** -text
+*.png -text
+*.jpg -text
+*.webp -text
+*.woff2 -text

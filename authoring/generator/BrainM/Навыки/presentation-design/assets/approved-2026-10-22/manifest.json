@@ -1,0 +1,277 @@
+{
+  "sourceRepository": "https://github.com/OlgaKraven/2026-OKFKS-lecture",
+  "sourceCommit": "a83aff10581dff0068241c488174d22179a6d4b2",
+  "capturedFrom": "local checkout matching the published source",
+  "capturedOn": "2026-10-22",
+  "screenshots": [
+    {
+      "key": "title",
+      "theme": "light",
+      "label": "Титул",
+      "file": "title-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s001",
+      "sha256": "8e45643d46c468dfeaf60314ca8aa81d94f1fa08334feff068d971ab96521746"
+    },
+    {
+      "key": "question",
+      "theme": "light",
+      "label": "Вопрос: нижняя строка красная",
+      "file": "question-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s024",
+      "sha256": "14d80deeca2fbdcdb2e6a2b0d501ea33320b2bc4fe678af64c0457f3098a5308"
+    },
+    {
+      "key": "definitions",
+      "theme": "light",
+      "label": "Определения для записи",
+      "file": "definitions-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s047",
+      "sha256": "d62ba1f1b6656a741dd64dcae697ad9440872196d90b95d2aab321746490a6d1"
+    },
+    {
+      "key": "diagram",
+      "theme": "light",
+      "label": "Схема на своём слайде",
+      "file": "diagram-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s015",
+      "sha256": "6dbdb0fa2016dc211c03151c149a06a227d3f405261acce3e991cde501e4bf27"
+    },
+    {
+      "key": "passport",
+      "theme": "light",
+      "label": "Паспорт самостоятельного дополнения",
+      "file": "passport-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-q1-supplement",
+      "sha256": "c2de09ddbbbf0b1fa987fec1ae7cfd2a63d3b8158493f7c74741b27817888311"
+    },
+    {
+      "key": "answer",
+      "theme": "light",
+      "label": "Поле ответа рядом с заданием",
+      "file": "answer-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s021",
+      "sha256": "d7bb19b3943bef107530b24d6c57f4afec8b95f28a1732a34f338881067e81ff"
+    },
+    {
+      "key": "menu",
+      "theme": "light",
+      "label": "Компактная шапка и меню «Ещё»",
+      "file": "menu-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s001",
+      "sha256": "ca4ee719539bd5b7c5985eaf8bfd8e567142634b54228628bf88980161ea3708"
+    },
+    {
+      "key": "teacher",
+      "theme": "light",
+      "label": "Окно преподавателя: две колонки",
+      "file": "teacher-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?mode=presenter&lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s047&session=approved-design-reference",
+      "sha256": "eb88727d982f49a4ded88b239cf40e0571ded6d079e79d90f4a9e162593237af"
+    },
+    {
+      "key": "title",
+      "theme": "dark",
+      "label": "Титул",
+      "file": "title-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s001",
+      "sha256": "c268b3da2664b04f5924fba18569025bd58fd3da832a5f7b242cd4b8424021f9"
+    },
+    {
+      "key": "question",
+      "theme": "dark",
+      "label": "Вопрос: нижняя строка красная",
+      "file": "question-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s024",
+      "sha256": "8189eed92b860ec03e88d8af11bca4386fe3bcf0d38766ad5b206f1a3a8d5df4"
+    },
+    {
+      "key": "definitions",
+      "theme": "dark",
+      "label": "Определения для записи",
+      "file": "definitions-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s047",
+      "sha256": "49f7ea0a4591b1add5fcf5405748ea5701be9c03d27b3dd1ec5ab96257dcd81a"
+    },
+    {
+      "key": "diagram",
+      "theme": "dark",
+      "label": "Схема на своём слайде",
+      "file": "diagram-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s015",
+      "sha256": "21be79ed41327b638705dd4176d7b1f9fc82b0bd9f9039f0515dcded0cddb9a4"
+    },
+    {
+      "key": "passport",
+      "theme": "dark",
+      "label": "Паспорт самостоятельного дополнения",
+      "file": "passport-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-q1-supplement",
+      "sha256": "ef7059318cfd9b24b6e86518068d15d9d2d6695b22bd78fb9d848b06c333b777"
+    },
+    {
+      "key": "answer",
+      "theme": "dark",
+      "label": "Поле ответа рядом с заданием",
+      "file": "answer-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s021",
+      "sha256": "664a102faf492aa68bfb57aeb36c12ae242c69502465980be8aa30ecb55f22d2"
+    },
+    {
+      "key": "menu",
+      "theme": "dark",
+      "label": "Компактная шапка и меню «Ещё»",
+      "file": "menu-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s001",
+      "sha256": "ede28a52b2f3f3e5ea368195e83f7c7972595ba2c3726078cce031941b63846c"
+    },
+    {
+      "key": "teacher",
+      "theme": "dark",
+      "label": "Окно преподавателя: две колонки",
+      "file": "teacher-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "https://olgakraven.github.io/2026-OKFKS-lecture/?mode=presenter&lecture=s07-01-quality-and-failures&slide=s07-01-quality-and-failures-s047&session=approved-design-reference",
+      "sha256": "3994f0d9ad34722d7421871f491aa4a0cd4b68175289501bb85b44ba21c4522c"
+    },
+    {
+      "key": "mobile",
+      "label": "Узкий экран: определения",
+      "theme": "light",
+      "file": "definitions-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sha256": "0888878eedafc22f63682a2bdec85368f735956d3d760b99e5fd1f2205677239"
+    },
+    {
+      "key": "contents",
+      "theme": "light",
+      "label": "Содержание с номерами вопросов",
+      "file": "contents-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "a5dee8eadccb5c8a5871cbd08b4111ba942e04a83e1dc68ab7d616c1c0d0e076"
+    },
+    {
+      "key": "assessment",
+      "theme": "light",
+      "label": "Обзор самопроверки по вопросам",
+      "file": "assessment-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "7b54554bee0cae56696b1e9e792dbbab0383411744cb8ff12cc6c7c26fcff69e"
+    },
+    {
+      "key": "audience",
+      "theme": "light",
+      "label": "Окно аудитории без панели преподавателя",
+      "file": "audience-light.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "b5ff567f89d44584b8176348ae00a80f5c22329a223b718d51a26239f57d52af"
+    },
+    {
+      "key": "contents",
+      "theme": "dark",
+      "label": "Содержание с номерами вопросов",
+      "file": "contents-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "98652659c4fefa71d428b6a860f3016766b8acff4056dfb49e6f292f2a5ff542"
+    },
+    {
+      "key": "assessment",
+      "theme": "dark",
+      "label": "Обзор самопроверки по вопросам",
+      "file": "assessment-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "ecbff424185fa1a4606edcb559f93ea898aa0d5cd91654f27d1aee6a377e01dd"
+    },
+    {
+      "key": "audience",
+      "theme": "dark",
+      "label": "Окно аудитории без панели преподавателя",
+      "file": "audience-dark.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "sha256": "1c490ab63aed0c41aafaa7098fd0a2f081578751d7a156875f8003dc4b68e10a"
+    }
+  ]
+}
