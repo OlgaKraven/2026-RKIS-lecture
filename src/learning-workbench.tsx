@@ -48,9 +48,10 @@ function Scene({model,scenario,step,print=false}:{model:LearningModel;scenario:S
  </div>;
 }
 
-function WorkbenchDialog({title,children,readonly,onClose}:{title:string;children:React.ReactNode;readonly:boolean;onClose:()=>void}){
+function WorkbenchDialog({title,children,readonly,review,onClose}:{title:string;children:React.ReactNode;readonly:boolean;review:boolean;onClose:()=>void}){
  const ref=useRef<HTMLDialogElement>(null);
  useEffect(()=>{const focus=document.activeElement as HTMLElement|null;ref.current?.showModal();return()=>{ref.current?.close();focus?.focus()}},[]);
+ useEffect(()=>{if(review)ref.current?.querySelector('.lw-review')?.scrollIntoView({block:'nearest'});else if(ref.current)ref.current.scrollTop=0},[review]);
  return createPortal(<dialog className="lw-dialog" ref={ref} aria-label={title} onCancel={event=>{event.preventDefault();if(!readonly)onClose()}}><header><h2>{title}</h2>{!readonly&&<button type="button" onClick={onClose}>Закрыть</button>}</header>{children}</dialog>,document.body);
 }
 
@@ -106,7 +107,7 @@ function LearningWorkbenchContent({model,passport,interactive}:{model:LearningMo
   <p className="lw-given">{scenario.given}</p>{controls}{menu}<p className="lw-step" role="status">Шаг {state.step} из {max}. {frame.label}</p>
   <Scene model={model} scenario={scenario} step={state.step}/>
   <section className="lw-task"><h3>Самостоятельное решение</h3><p>{model.task}</p><p>{model.output}</p>
-   <label>Ваш результат<input value={state.input} readOnly={readonly} onChange={e=>update({input:e.target.value,checked:false,reveal:false})}/></label>
+   <label>Ваш результат<input value={state.input} readOnly={readonly} tabIndex={readonly?-1:undefined} onChange={e=>update({input:e.target.value,checked:false,reveal:false})}/></label>
    {!readonly&&<div className="lw-actions"><button type="button" onClick={()=>update({checked:true})}>Проверить</button><button type="button" onClick={()=>update({reveal:!state.reveal,playing:false})}>{state.reveal?'Скрыть разбор':'Показать разбор'}</button><button type="button" disabled={state.step!==max} onClick={()=>update({comparisons:[...state.comparisons.slice(-2),{title:scenario.title,result:Object.entries(frame.variables).map(([k,v])=>`${k}: ${v}`).join('; ')}]})}>Сохранить результат для сравнения</button></div>}
    {state.checked&&<p className="lw-feedback" role="status">{!state.input.trim()?'Сначала запишите результат.':scenario.accepted.some(value=>matches(state.input,value))?'Верно. Обоснуйте ответ наблюдаемым состоянием.':scenario.hint}</p>}
    {state.reveal&&<div className="lw-review"><h4>Разбор решения</h4><p>{scenario.review}</p></div>}
@@ -118,6 +119,6 @@ function LearningWorkbenchContent({model,passport,interactive}:{model:LearningMo
  return <div ref={root} className={`learning-workbench ${passport?'lw-passport':''}`}>
   {passport?<>{passportContent}{!readonly&&<button className="lw-open" type="button" onClick={()=>update({expanded:true,playing:false})}>Открыть практику</button>}</>:<><Scene model={model} scenario={scenario} step={state.step}/><p className="lw-step">{frame.label}</p>{controls}{menu}</>}
   {headerHost&&createPortal(<button className="diagram-header-button" type="button" onClick={()=>update({expanded:true,playing:false})}>Развернуть схему</button>,headerHost)}
-  {state.expanded&&<WorkbenchDialog title={model.title} readonly={readonly} onClose={()=>update({expanded:false,playing:false})}>{lesson}</WorkbenchDialog>}
+  {state.expanded&&<WorkbenchDialog title={model.title} readonly={readonly} review={state.reveal} onClose={()=>update({expanded:false,playing:false})}>{lesson}</WorkbenchDialog>}
  </div>;
 }
