@@ -2176,7 +2176,7 @@
             "items": [
               {
                 "title": "Команда",
-                "text": "SELECT id, name FROM products WHERE id = $1."
+                "text": "SELECT id, name, price FROM products WHERE id = $1."
               },
               {
                 "title": "Параметр",
@@ -2188,7 +2188,7 @@
               },
               {
                 "title": "Модель",
-                "text": "id и name преобразуются в объект Product."
+                "text": "id, name и price преобразуются в объект Product; nullable-поля потребовали бы отдельной проверки DBNull."
               }
             ],
             "caption": "Учебный разбор: исходное состояние, операция, проверка и наблюдаемый результат."
@@ -2199,9 +2199,9 @@
           "kind": "example",
           "title": "Пример кода",
           "kicker": "МДК.05.02",
-          "code": "await using var cmd = dataSource.CreateCommand(\n    \"SELECT id, name FROM products WHERE id = $1\");\ncmd.Parameters.Add(new Npgsql.NpgsqlParameter<int> { TypedValue = id });\nawait using var reader = await cmd.ExecuteReaderAsync(ct);\nif (!await reader.ReadAsync(ct)) return null;\nreturn new Product(reader.GetInt32(0), reader.GetString(1));",
+          "code": "await using var cmd = dataSource.CreateCommand(\n    \"SELECT id, name, price FROM products WHERE id = $1\");\ncmd.Parameters.Add(new Npgsql.NpgsqlParameter<int> { TypedValue = id });\nawait using var reader = await cmd.ExecuteReaderAsync(ct);\nif (!await reader.ReadAsync(ct)) return null;\nreturn new Product(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2));",
           "codeLanguage": "csharp",
-          "body": "Тело метода Task<Product?> FindAsync(int id, CancellationToken ct); Product имеет Id и Name. Для MySQL SQL использует @id и MySqlParameter."
+          "body": "Тело метода Task<Product?> FindAsync(int id, CancellationToken ct); Product имеет Id, Name и Price, как в общей модели. Для MySQL SQL использует @id и MySqlParameter."
         },
         {
           "id": "s05-15-commands-result",
@@ -2222,7 +2222,7 @@
           "kind": "example",
           "title": "Тот же поиск через MySqlConnector",
           "kicker": "МДК.05.02",
-          "code": "await using var cmd = new MySqlCommand(\n    \"SELECT id, name FROM products WHERE id = @id\", connection);\ncmd.Parameters.AddWithValue(\"@id\", id);\nawait using var reader = await cmd.ExecuteReaderAsync(ct);\nif (!await reader.ReadAsync(ct)) return null;\nreturn new Product(reader.GetInt32(0), reader.GetString(1));",
+          "code": "await using var cmd = new MySqlCommand(\n    \"SELECT id, name, price FROM products WHERE id = @id\", connection);\ncmd.Parameters.AddWithValue(\"@id\", id);\nawait using var reader = await cmd.ExecuteReaderAsync(ct);\nif (!await reader.ReadAsync(ct)) return null;\nreturn new Product(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2));",
           "codeLanguage": "csharp",
           "body": "В MySQL/MariaDB используется тот же предметный Id, но другой класс команды и именованный параметр. Это адаптация доступа к данным, а не изменение модели товара."
         },
@@ -4265,7 +4265,7 @@
           "kind": "example",
           "title": "Минимальный локальный источник данных",
           "kicker": "МДК.05.02",
-          "code": "var builder = WebApplication.CreateBuilder(args);\nbuilder.WebHost.UseUrls(\"http://127.0.0.1:5080\");\nvar app = builder.Build();\napp.MapGet(\"/products\", () => new[] {\n    new { Id = 7, Name = \"Блокнот\", Price = 125.50m }\n});\napp.Run();",
+          "code": "var builder = WebApplication.CreateBuilder(args);\nbuilder.Services.ConfigureHttpJsonOptions(o =>\n    o.SerializerOptions.PropertyNamingPolicy = null);\nbuilder.WebHost.UseUrls(\"http://127.0.0.1:5080\");\nvar app = builder.Build();\napp.MapGet(\"/products\", () => new[] {\n    new { Id = 7, Name = \"Блокнот\", Price = 125.50m }\n});\napp.Run();",
           "codeLanguage": "csharp",
           "body": "Сервис запускается отдельным процессом на 127.0.0.1:5080. Маршрут /products возвращает JSON-массив с теми же полями, что файловый источник. Сервер не является частью окна WinForms или WPF."
         },
