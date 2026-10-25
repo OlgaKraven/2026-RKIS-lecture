@@ -1,4 +1,6 @@
 authoring/generator/** -text
+public/*.json text eol=lf
+authoring/*.json text eol=lf
 *.png -text
 *.jpg -text
 *.webp -text

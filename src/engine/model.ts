@@ -130,6 +130,7 @@ export type Course = {
   ornament: string
   font: string
   materialsUrl: string
+  codeExamplesUrl?: string
   topicArrow?: string
   literature?: { primary: Reading[]; additional: Reading[] }
   assessment?: { mode: 'autonomous'; url: string }
