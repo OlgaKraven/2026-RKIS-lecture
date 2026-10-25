@@ -8,7 +8,7 @@ root=Path(__file__).resolve().parents[1]
 def read(path): return json.loads((root/path).read_text(encoding='utf-8'))
 def write(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path.write_bytes((json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
 literature=read('authoring/literature.json')
 supplements=read('authoring/supplements.json')
 lessons=[]
@@ -23,6 +23,7 @@ course={'schemaVersion':1,'contentVersion':'rkis-2026-10-25-2','id':'rkis','code
     'logo':'brand/synergy-wordmark.jpg','mark':'brand/synergy-mark.png','ornament':'brand/side-ornament.png',
     'font':'fonts/raleway-cyrillic.woff2','topicArrow':'brand/topic-arrow.webp',
     'materialsUrl':'https://disk.yandex.ru/d/S7PWVBaKBr2ECg','demo':False,'semesters':[5,6,7],
+    'codeExamplesUrl':'https://github.com/OlgaKraven/2026-RKIS-lecture/tree/main/examples',
     'literature':{g:[{'citation':v['citation'],'url':v['url']} for v in literature.values() if v['group']==g] for g in ['primary','additional']},
     'lectures':[]}
 notes={}

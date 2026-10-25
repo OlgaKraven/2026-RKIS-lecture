@@ -13,7 +13,7 @@ function QR({url}:{url:string}){
 export function Resources({course,slide,base}:{course:Course;slide:Slide;base:string}){
  if(slide.kind==='materials'){
   const url=safeUrl(read(`lecture:${base}:${course.id}:materials`,course.materialsUrl))
-  return url?<div className="materials-resource"><QR url={url}/><div><strong>Ссылка на материалы</strong><a href={url} target="_blank" rel="noreferrer">{url} ↗</a><p>Отсканируйте QR-код или откройте ссылку.</p></div></div>:<p className="resource-empty">Ссылка на материалы пока не указана. Добавьте её через «Прикрепить материалы» на главной странице.</p>
+  return url?<div className="materials-resource"><QR url={url}/><div><strong>Ссылка на материалы</strong><a href={url} target="_blank" rel="noreferrer">{url} ↗</a><p>Отсканируйте QR-код или откройте ссылку.</p>{course.codeExamplesUrl&&<a href={safeUrl(course.codeExamplesUrl)} target="_blank" rel="noreferrer">Примеры кода ↗</a>}</div></div>:<p className="resource-empty">Ссылка на материалы пока не указана. Добавьте её через «Прикрепить материалы» на главной странице.</p>
  }
  const entries=slide.references??course.literature?.[slide.readingGroup||'primary']??[]
  return entries.length?<div className="reading-list">{entries.map((entry,i)=>{const url=entry.url&&safeUrl(entry.url);return <div className="reading-entry" key={i}>{url&&<QR url={url}/>}<div><p>{entry.citation}</p>{url&&<a href={url} target="_blank" rel="noreferrer">Открыть источник ↗</a>}</div></div>})}</div>:<p className="resource-empty">Список литературы для этой дисциплины пока не заполнен.</p>
