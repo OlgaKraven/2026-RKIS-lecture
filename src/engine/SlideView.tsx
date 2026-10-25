@@ -6,6 +6,7 @@ import { DiagramControl,Infographic } from './Infographic'
 import type {DiagramView} from './Infographic'
 import { TaskView } from './Assessment'
 import {Practice} from '../practice'
+import {QuestionTitle} from '../question-title'
 export function SlideView({
   course,
   lecture,
@@ -52,7 +53,7 @@ export function SlideView({
       <div className="slide-content">
         <div className="slide-copy">
           <p className="slide-kicker">{slide.kicker}</p>
-          <h2>{slide.title}</h2>
+          {slide.kind==='section'?<QuestionTitle text={slide.title}/>:<h2>{slide.title}</h2>}
           {(slide.kind === 'literature' || slide.kind === 'materials') && (
             <Resources course={course} slide={slide} base={base} />
           )}

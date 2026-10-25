@@ -51,7 +51,7 @@
   "note": "Source files came from the available local engine checkout, including local adaptations. Source HEAD alone is not their exact identity; file hashes are authoritative. No source checkout was modified.",
   "adaptedFilesSha256": {
     "src/engine/model.ts": "370e0abfcc38c1b2e938120c3a530b6beaa04319811c938fafa1d07759791b73",
-    "src/engine/SlideView.tsx": "9b91c6e5915d8dbe371b067a1cba3fa003d4e83e48de839662bf9a4bdc1c039a",
+    "src/engine/SlideView.tsx": "a86d466028f150a460520ec1d14805c1a54a29030e698a20aab30dd02765237e",
     "src/engine/CourseCatalog.tsx": "fd04f0e3bdf4ff903265631330300d1ff44bdd5f286ac8de4e73a97892f5a428"
   }
 }
