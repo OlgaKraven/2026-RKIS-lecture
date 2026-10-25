@@ -1,0 +1,13 @@
+{
+  "sourceRepository": "https://github.com/OlgaKraven/2026-OKFKS-lecture",
+  "sourceRevision": "e36d01992be97c09335527583de04eaad303402d",
+  "catalogSourceFilesSha256": {
+    "CourseCatalog.tsx": "a2d2dbc921e64d9e4d85a4dc47899c73f47404ae48f087cd40718970d9f9c7c8",
+    "course-catalog.css": "886c80feadc6d018f7aadf1ab18df2dba09031c4c1356b1c9b19a9700af74c75"
+  },
+  "adaptedFilesSha256": {
+    "src/CourseCatalog.tsx": "5654c9c5d89efdd06d2bd6693016fb9214ff673ca305cfe4a304b458ee3ed278",
+    "src/course-catalog.css": "8ae3439270a066680cafc8c2f9f3ca9835e1fc373ab951a8057c4fa248cc3ce3"
+  },
+  "scope": "Catalog component and scoped styles; lecture questions are authored for RKIS."
+}

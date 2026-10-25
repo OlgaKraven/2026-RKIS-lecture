@@ -104,6 +104,7 @@ export type Slide = {
   code?: string
   codeLanguage?: string
   practice?: {solutionId:string}
+  learning?: {id:string;passport?:boolean}
 }
 export type Lecture = {
   id: string

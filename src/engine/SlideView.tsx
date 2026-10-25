@@ -7,6 +7,7 @@ import type {DiagramView} from './Infographic'
 import { TaskView } from './Assessment'
 import {Practice} from '../practice'
 import {QuestionTitle} from '../question-title'
+import {LearningWorkbench} from '../learning-workbench'
 export function SlideView({
   course,
   lecture,
@@ -72,6 +73,7 @@ export function SlideView({
           {slide.body && <p className="slide-body-copy">{slide.body}</p>}
           {slide.code && <pre className="rkis-code"><code>{slide.code}</code></pre>}
           {slide.practice && <Practice id={slide.practice.solutionId} interactive={canControl}/>}
+          {slide.learning && <LearningWorkbench id={slide.learning.id} passport={slide.learning.passport} interactive={interactive}/>}
           {slide.bullets && (
             <ul>
               {slide.bullets.map((x) => (

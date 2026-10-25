@@ -25,6 +25,7 @@ import type { PublicState } from './session'
 import { AssessmentProvider, AssessmentSync } from './Assessment'
 import type { Attempt } from './Assessment'
 import { downloadJson, read, save } from './storage'
+import {mergeAuthorNotes,noteOverrides} from '../author-notes'
 type Props = {
   course: Course
   lecture: Lecture
@@ -162,7 +163,7 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
     skipped: number
   } | null>(null)
   const [notesSaved, setNotesSaved] = useState(true)
-  const [notes, setNotes] = useState<Record<string, Note>>(() => read(storageKey, {}))
+  const [notes, setNotes] = useState<Record<string, Note>>(() => mergeAuthorNotes(read(storageKey, {})))
   const [shown, setShown] = useState(() =>
     read(sessionKey, { slideId: initialSlide, black: false }),
   )
@@ -352,7 +353,7 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
   const update = (value: Partial<Note>) => {
     const next = { ...notes, [selectedSlide.id]: { ...note, ...value } }
     setNotes(next)
-    const ok = save(storageKey, next)
+    const ok = save(storageKey, noteOverrides(next))
     setNotesSaved(ok)
     if (!ok) setNotice('Не удалось сохранить заметки в браузере. Скачайте файл заметок.')
   }
@@ -457,7 +458,7 @@ function Presenter({ course, lecture, base, profile, session, initialSlide, onEx
             className="button primary"
             onClick={() => {
               const next = { ...notes, ...pendingNotes.notes }
-              if (!save(storageKey, next)) {
+              if (!save(storageKey, noteOverrides(next))) {
                 setNotice('Не удалось сохранить заметки')
                 return
               }
